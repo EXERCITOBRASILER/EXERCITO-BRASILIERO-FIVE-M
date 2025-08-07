@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>📚 Material de Estudo - Rádio & Patrulhamento</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-color: #f4f6fc;
-      --text-color: #333;
-      --primary-color: #304ffe;
-      --secondary-bg: #ffffff;
-      --table-header: #e8eaf6;
-      --hover-color: #eef1ff;
-      --box-bg: #ffffff;
+      --bg-color: #f9f8f3;          /* bege claro */
+      --text-color: #000000;        /* preto */
+      --primary-color: #3e4e2c;     /* verde oliva */
+      --secondary-bg: #ffffff;      /* branco */
+      --table-header: #e3e4dd;      /* cinza claro */
+      --hover-color: #f0f1e5;       /* bege ainda mais claro */
+      --box-bg: #ffffff;             /* branco */
+      --border-color: #cfcfcf;
+      --shadow-color: rgba(0, 0, 0, 0.1);
     }
+
     body.dark-mode {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --primary-color: #90caf9;
-      --secondary-bg: #1e1e1e;
-      --table-header: #333;
-      --hover-color: #2a2a2a;
-      --box-bg: #1e1e1e;
+      --bg-color: #2a2f21;          /* verde militar escuro */
+      --text-color: #e6e6d7;        /* bege claro, quase branco */
+      --primary-color: #8fa87b;     /* verde claro */
+      --secondary-bg: #3e4e2c;      /* verde musgo */
+      --table-header: #4b5c32;      /* verde camuflado */
+      --hover-color: #6a7a42;       /* verde claro hover */
+      --box-bg: #3e4e2c;
+      --border-color: #66753a;
+      --shadow-color: rgba(0, 0, 0, 0.3);
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--bg-color);
@@ -32,23 +38,27 @@
       line-height: 1.6;
       transition: background 0.3s, color 0.3s;
     }
+
     header {
       background: var(--primary-color);
-      color: white;
+      color: var(--text-color);
       text-align: center;
       padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 6px var(--shadow-color);
       position: relative;
     }
+
     header h1 {
       margin: 0;
       font-size: 2rem;
+      color: var(--text-color);
     }
+
     .toggle-mode {
       position: absolute;
       right: 20px;
       top: 20px;
-      background: white;
+      background: var(--secondary-bg);
       color: var(--primary-color);
       border: none;
       padding: 10px 15px;
@@ -57,24 +67,28 @@
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
     }
+
     body.dark-mode .toggle-mode {
-      background: #1e1e1e;
-      color: white;
-      border: 1px solid #90caf9;
+      background: var(--box-bg);
+      color: var(--text-color);
+      border: 1px solid var(--primary-color);
     }
+
     main {
       max-width: 1100px;
       margin: 30px auto;
       padding: 0 15px;
     }
+
     h2 {
       background-color: var(--primary-color);
-      color: white;
+      color: var(--secondary-bg);
       padding: 10px 15px;
       border-radius: 8px;
       margin-top: 40px;
       font-size: 1.3rem;
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -82,58 +96,72 @@
       background: var(--secondary-bg);
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px var(--shadow-color);
       transition: background 0.3s;
+      color: var(--text-color);
     }
+
     th, td {
       padding: 12px;
       text-align: left;
+      color: var(--text-color);
     }
+
     th {
       background: var(--table-header);
       font-weight: 600;
     }
+
     tr:nth-child(even) {
       background: var(--hover-color);
     }
+
     tr:hover {
       background: var(--table-header);
     }
+
     .box {
       background-color: var(--box-bg);
       padding: 15px;
       border-radius: 8px;
       margin-top: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px var(--shadow-color);
       font-size: 1rem;
       transition: background 0.3s;
+      color: var(--text-color);
     }
+
     .box strong {
       color: var(--primary-color);
     }
+
     code {
       background-color: var(--table-header);
       padding: 4px 8px;
       border-radius: 4px;
       display: inline-block;
       margin-top: 5px;
+      color: var(--text-color);
+      font-family: monospace;
     }
+
     .back-top {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background: var(--primary-color);
-      color: white;
+      color: var(--secondary-bg);
       border: none;
       padding: 12px;
       border-radius: 50%;
       cursor: pointer;
       font-size: 18px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 6px var(--shadow-color);
       transition: background 0.3s;
     }
+
     .back-top:hover {
-      background: #1a34d3;
+      background: #2f3b23;
     }
   </style>
 </head>
@@ -143,14 +171,14 @@
     <h1>📚 Material de Estudo - Rádio & Patrulhamento</h1>
     <button class="toggle-mode" onclick="toggleDarkMode()">🌙 Modo Escuro</button>
   </header>
-
+<img src="img/maxresdefault.png" alt="Descrição" style="display: block; margin: 0 auto;" width="500" />
   <main>
     <section>
       <h2>📡 Códigos Q - Comunicação via Rádio</h2>
       <table>
         <tr><th>Código</th><th>Significado</th></tr>
         <tr><td>QAP</td><td>Na escuta</td></tr>
-        <tr><td>QRR</td><td>Apoio terrestre </td></tr>
+        <tr><td>QRR</td><td>Apoio terrestre</td></tr>
         <tr><td>QSL</td><td>Entendido</td></tr>
         <tr><td>QSM</td><td>Repetir mensagem</td></tr>
         <tr><td>QTO</td><td>Ir ao banheiro</td></tr>
@@ -189,17 +217,17 @@
       <h2>👮‍♂️ Funções dentro da Viatura</h2>
       <table>
         <tr><th>Posição</th><th>Função</th></tr>
-        <tr><td>P1</td><td>É RESPONSÁVEL  PELA VIATURA,CONDUÇÃO E SUA VISÃO É FOCADA APENAS PARA FRENTE Em SITUACAO DE CODIGO 5  PROCURAR UM LUGAR SEGURO PARA O DROP</td></tr>
-        <tr><td>P2</td><td>É RESPONSÁVEL PELA MODULAÇÃO COM A CENTRAL, VIA RADIO E COM UM INDIVÍDUO DURANTE AS ABORDAGENS E TAMBEM EXECUTAR ABORDAGENS</td></tr>
-        <tr><td>P3</td><td>FAZER O PERIMETRO DO LOCAL DURANTE UMA ABORDAGEM</td></tr>
-        <tr><td>P4</td><td>Apoio ou réu em custódia</td></tr>
+        <tr><td>P1</td><td>É responsável pela viatura, condução e sua visão é focada apenas para frente. Em situação de código 5, procurar um lugar seguro para o drop.</td></tr>
+        <tr><td>P2</td><td>É responsável pela modulação com a central, via rádio, com um indivíduo durante as abordagens e também por executar abordagens.</td></tr>
+        <tr><td>P3</td><td>Fazer o perímetro do local durante uma abordagem.</td></tr>
+        <tr><td>P4</td><td>Apoio ou réu em custódia.</td></tr>
       </table>
     </section>
 
     <section>
       <h2>📜 Lei de Miranda</h2>
       <div class="box">
-        <p><strong>"Sr(a), o(a) senhor(a) está sendo preso(a) pelo Exército Brasileiro tudo que o senhor falar podera e sera usado contra vc no tribunal o senhor tem direito a uma ligacao e um adivogado e um  copo de agua vc etende seus deiretos </strong></p>
+        <p><strong>"Sr(a), o(a) senhor(a) está sendo preso(a) pelo Exército Brasileiro. Tudo que o senhor falar poderá e será usado contra você no tribunal. O senhor tem direito a uma ligação, um advogado e um copo de água. O senhor entende seus direitos?"</strong></p>
       </div>
     </section>
 
@@ -222,10 +250,10 @@
     <section>
       <h2>🎙️ Modulações Padrão</h2>
       <div class="box">
-        <p><strong>📌 modulacao 1 Exemplo :</strong><br>
+        <p><strong>📌 Modulação 1 - Exemplo:</strong><br />
           <code>QAP Central, unidade (veículo), iniciando código 0 a total <strong>QRV</strong> da rede <strong>QSL</strong></code>
         </p>
-        <p><strong>📌 modulacao 2 Exemplo </strong><br>
+        <p><strong>📌 Modulação 2 - Exemplo:</strong><br />
           <code>QAP Central, solicito uma QSV no meu QTH...</code>
         </p>
       </div>
@@ -238,12 +266,11 @@
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
       const button = document.querySelector('.toggle-mode');
-      if (document.body.classList.contains('dark-mode')) {
-        button.textContent = '☀️ Modo Claro';
-      } else {
-        button.textContent = '🌙 Modo Escuro';
-      }
+      button.textContent = document.body.classList.contains('dark-mode') ? '☀️ Modo Claro' : '🌙 Modo Escuro';
     }
   </script>
+
 </body>
 </html>
+
+
